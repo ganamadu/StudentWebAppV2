@@ -2,23 +2,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  name: studentwebappdevelopment
+  name: studentwebappv2development
 spec:
   replicas: 2
   strategy:
     type: Recreate
   selector:
     matchLabels:
-      app: studentwebapp
+      app: studentwebappv2
   template:
     metadata:
-      name: studentwebapppod
+      name: studentwebappv2pod
       labels:
-        app: studentwebapp 
+        app: studentwebappv2
     spec:
       containers:
-      - name: studentwebappcontainer
-        image: thannidocer/studentwebapp
+      - name: studentwebappv2container
+        image: thannidocer/studentwebappv2
         ports:
           - containerPort: 8080  
 
@@ -26,11 +26,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: studentwebappsvc
+  name: studentwebappv2svc
 spec:
   type: NodePort
   selector:
-    app: studentwebapp
+    app: studentwebappv2
   ports:
     - port: 80
       targetPort: 8080

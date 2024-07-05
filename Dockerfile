@@ -1,3 +1,3 @@
 FROM openjdk:17
-ADD target/StudentWebApp-0.0.1-SNAPSHOT.jar StudentWebApp-0.0.1-SNAPSHOT.jar
-ENTRYPOINT [ "java", "-jar","StudentWebApp-0.0.1-SNAPSHOT.jar"]
+ADD target/StudentWebAppV2-0.0.1-SNAPSHOT.jar StudentWebAppV2-0.0.1-SNAPSHOT.jar
+ENTRYPOINT [ "java", "-jar","StudentWebAppV2-0.0.1-SNAPSHOT.jar"]
