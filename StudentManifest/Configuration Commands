@@ -1,0 +1,5 @@
+#Docker Commands
+docker build -f Dockerfile -t student_web_app .
+docker run -d -p 10555:8080 student_web_app
+docker tag student_web_app thannidocer/studentwebapp
+docker push thannidocer/studentwebapp
