@@ -32,7 +32,7 @@ spec:
   selector:
     app: studentwebappv2
   ports:
-    - port: 80
-      targetPort: 8080
-      nodePort: 30785
+    - port: 81
+      targetPort: 8081
+      nodePort: 30786
 ---
